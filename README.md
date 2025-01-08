@@ -47,6 +47,104 @@ Install dependencies with:
 pip install torch transformers numpy tqdm
 ```
 
+---
+
+## **Setup**
+Clone the Repository:
+```bash
+git clone https://github.com/hamadeen99/SmallGPT_Wikitext103.git
+cd SmallGPT_Wikitext103
+```
+
+---
+
+## **Dataset**
+Download Wikitext-103 Dataset:
+- Download the dataset from Wikitext-103.
+- Extract the files (wiki.train.tokens, wiki.valid.tokens, wiki.test.tokens) into the data/wikitext-103/ folder:
+
+```Data Structure
+SmallGPT_Wikitext103/
+├── data/
+│   ├── wikitext-103/
+│       ├── wiki.train.tokens
+│       ├── wiki.valid.tokens
+│       ├── wiki.test.tokens
+```
+Directory Structure:
+
+Ensure the project directory is structured as follows:
+```files Structure
+SmallGPT_Wikitext103/
+├── AutoRegressiveWrapper.py
+├── MyNLPDataSet.py
+├── Utils.py
+├── TransformerXY_WK103_Main.py
+├── models/
+│   ├── AHSelfAttention.py
+│   ├── PositionEncoding.py
+│   ├── SimpleTransformer.py
+│   ├── TransformerBlock.py
+├── checkpoint/
+│   └── [model checkpoints]
+├── data/
+│   ├── wikitext-103/
+│       ├── wiki.train.tokens
+│       ├── wiki.valid.tokens
+│       ├── wiki.test.tokens
+```
+
+---
+
+##**Usage**
+Train the Model:
+Run the following command to start training:
+
+```bash
+python TransformerAH_WK103_Main.py
+```
+
+-Modify constants like SEQ_LENGTH and BATCH_SIZE in the TransformerXY_WK103_Main.py file for your hardware capabilities.
+
+---
+
+
+# Resume Training
+
+Set the following constant in `TransformerXY_WK103_Main.py` to load the latest checkpoint:
+
+```python
+RESUME_TRAINING = True
+```
+
+This will resume training from the `checkpoint/` folder.
+
+# Evaluate the Model
+
+Evaluate the perplexity or generate text sequences during or after training by running:
+
+```bash
+python TransformerAH_WK103_Main.py
+```
+
+# Results
+
+## Perplexity
+
+- Achieved a perplexity score of **54.08** with `SEQ_LENGTH = 256` and `GENERATE_LENGTH = 128` after 100% training.
+- After modifying `SEQ_LENGTH = 1024` and `GENERATE_LENGTH = 512`, achieved a significant perplexity reduction to **39.44** with only 12% training.
+
+## Bits Per Character (BPC)
+
+- BPC with `SEQ_LENGTH = 256` and `GENERATE_LENGTH = 128`: **5.7548**.
+- BPC with `SEQ_LENGTH = 1024` and `GENERATE_LENGTH = 512`: **5.3**.
+
+
+
+
+
+
+
 
 
 
