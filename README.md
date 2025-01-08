@@ -1,6 +1,6 @@
 # **SmallGPT for Wikitext-103**
 
-A PyTorch-based implementation of a small Transformer architecture for word-level language modeling. This project leverages the Wikitext-103 dataset, a BERT tokenizer, and adaptive techniques for efficient training and evaluation. The model achieves a perplexity of ~37 after partial training, demonstrating its effectiveness for language modeling tasks.
+A PyTorch-based implementation of a small Transformer architecture for word-level language modeling. This project leverages the Wikitext-103 dataset, a BERT tokenizer, and adaptive techniques for efficient training and evaluation. The model achieves a perplexity of ~54.08 after partial training, demonstrating its effectiveness for language modeling tasks.
 
 ---
 
