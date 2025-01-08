@@ -60,7 +60,7 @@ cd SmallGPT_Wikitext103
 
 ## **Dataset**
 Download Wikitext-103 Dataset:
-- Download the dataset from Wikitext-103.
+- Download the dataset from [Wikitext-103](https://huggingface.co/datasets/Salesforce/wikitext).
 - Extract the files (wiki.train.tokens, wiki.valid.tokens, wiki.test.tokens) into the data/wikitext-103/ folder:
 
 ```Data Structure
