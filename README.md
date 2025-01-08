@@ -96,7 +96,7 @@ SmallGPT_Wikitext103/
 
 ---
 
-##**Usage**
+# Usage
 Train the Model:
 Run the following command to start training:
 
