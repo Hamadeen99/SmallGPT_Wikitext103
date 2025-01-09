@@ -2,6 +2,17 @@
 
 A PyTorch-based implementation of a small Transformer architecture for word-level language modeling. This project leverages the Wikitext-103 dataset, a BERT tokenizer, and adaptive techniques for efficient training and evaluation. The model achieves a perplexity of ~54.08 after partial training, demonstrating its effectiveness for language modeling tasks.
 
+ In a word level language model, the size of the output in 
+the logits layer depends upon the dictionary size of unique words. In Wikitext-103 dataset, the 
+number of unique words is 267,735. If the embedding size is 512, this will require a weight 
+matrix of 512x267,735 which makes the model size quite large.
+
+The hugging face group has released a transformer library which contains many pre-trained 
+transformer models as well as tokenizers. A tokenizer converts input text into set of numbers 
+called tokens which indicate the position of the word in the dictionary of unique words. To keep 
+the model size small, we will use the pre-trained BERT tokenizer which results in a dictionary 
+size of 28,996.
+
 ---
 
 ## **Table of Contents**
