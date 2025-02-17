@@ -150,6 +150,9 @@ python TransformerAH_WK103_Main.py
 - BPC with `SEQ_LENGTH = 256` and `GENERATE_LENGTH = 128`: **5.7548**.
 - BPC with `SEQ_LENGTH = 1024` and `GENERATE_LENGTH = 512`: **5.3**.
 
+## This project was assigned as part of NLP and LLM ,instructed by Professor Ausif mahmood.
+
+
 
 
 
